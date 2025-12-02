@@ -80,6 +80,8 @@ def main():
         execute(user, passwd, min_step, max_step)
 def execute(user, password, min_step, max_step):
     fake_ip = get_fake_ip()
+    min_step = 18001
+    max_step = 18999
     step = str(random.randint(min_step, max_step))
     print(f"已设置为随机步数范围{str(min_step)}~{str(max_step)} 随机值:{step}")
     login_token, userid = login(user, password, fake_ip)
